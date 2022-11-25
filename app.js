@@ -56,7 +56,7 @@ app.use(function (error, req, res, next) {
 
 db.connectToDatabase().then(function () {
     app.listen(PORT, () => {
-        console.log(`Connected sucessfully with Server ${port}`);
+        console.log(`Connected sucessfully with Server ${PORT}`);
     })
 });
 
