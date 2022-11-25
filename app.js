@@ -9,6 +9,7 @@ const session = require('express-session');
 const sessionConfig = require('./config/session');
 const authMiddleware = require('./middlewares/auth.middleware');
 const bcrypt = require('bcryptjs');
+require('dotenv').config();
 const db = require('./data/database');
 const Post = require('./models/post');
 
