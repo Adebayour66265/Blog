@@ -20,10 +20,7 @@ const mongoSessionDbStore = sessionConfig.ceateSessionStore(session);
 // EXPRESS APP FUNCTION
 
 
-let port = 3000;
-if (process.env.PORT) {
-    port = process.env.PORT
-}
+let PORT = 3000 || process.env.PORT;
 
 const app = express();
 
@@ -58,7 +55,7 @@ app.use(function (error, req, res, next) {
 
 
 db.connectToDatabase().then(function () {
-    app.listen(port, () => {
+    app.listen(PORT, () => {
         console.log(`Connected sucessfully with Server ${port}`);
     })
 });
